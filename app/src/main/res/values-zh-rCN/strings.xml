@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">搞笑段子</string>
+    <string name="title_home">主页</string>
+    <string name="title_dashboard">发现</string>
+    <string name="title_notifications">消息</string>
+    <string name="title_me">我的</string>
+    <string name="interesting_tab">关注</string>
+    <string name="recommend_tab">推荐</string>
+    <string name="video_tab">视频</string>
+    <string name="picture_tab">趣图</string>
+    <string name="text_tab">段子</string>
+</resources>
