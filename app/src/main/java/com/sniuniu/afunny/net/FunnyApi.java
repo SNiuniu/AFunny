@@ -1,4 +1,4 @@
-package com.snn.funny.net;
+package com.sniuniu.afunny.net;
 
 import retrofit2.http.GET;
 import retrofit2.http.Query;

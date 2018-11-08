@@ -1,4 +1,4 @@
-package com.snn.funny.net;
+package com.sniuniu.afunny.net;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
@@ -40,6 +40,10 @@ public class RetrofitManager {
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .client(mOkHttpClient)
                 .build();
+    }
+
+    private Retrofit getRetrofit(){
+        return mRetrofit;
     }
 
 }
