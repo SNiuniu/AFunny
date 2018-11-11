@@ -1,8 +1,10 @@
 package com.sniuniu.afunny.net;
 
+import com.sniuniu.afunny.DataList;
+
+import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
-import rx.Observable;
 
 public interface FunnyApi {
 
@@ -10,7 +12,7 @@ public interface FunnyApi {
     Observable<String> getSatinComment(@Query("id") int id, @Query("page") int page);
 
     @GET("satinGodApi")
-    Observable<String> getsatinGodApi(@Query("type")int type, @Query("page") int page);
+    Observable<DataList> getsatinGodApi(@Query("type")int type, @Query("page") int page);
 
     int TYPE_ALL = 1;
     int TYPE_TEXT = 2;

@@ -2,7 +2,7 @@ package com.sniuniu.afunny.net;
 
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitManager {
@@ -18,9 +18,9 @@ public class RetrofitManager {
     }
 
     public static RetrofitManager getInstance(){
-        if (sRetrofitManager != null) {
+        if (sRetrofitManager == null) {
             synchronized (RetrofitManager.class) {
-                if (sRetrofitManager != null) {
+                if (sRetrofitManager == null) {
                     sRetrofitManager = new RetrofitManager();
                 }
             }
@@ -37,12 +37,12 @@ public class RetrofitManager {
         mRetrofit = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(mOkHttpClient)
                 .build();
     }
 
-    private Retrofit getRetrofit(){
+    public Retrofit getRetrofit(){
         return mRetrofit;
     }
 

@@ -10,4 +10,7 @@
     <string name="video_tab">视频</string>
     <string name="picture_tab">趣图</string>
     <string name="text_tab">段子</string>
+    <string name="play_count_description">次播放</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="header_description">header_description</string>
 </resources>

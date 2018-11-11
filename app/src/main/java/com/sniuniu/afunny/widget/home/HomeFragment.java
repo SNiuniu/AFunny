@@ -84,7 +84,7 @@ public class HomeFragment extends Fragment {
         fragments.add(TextFragment.newInstance(getString(R.string.text_tab), "text"));
 
         mViewPager = getView().findViewById(R.id.viewpager);
-        mViewPager.setAdapter(new TabPagerAdapter(getFragmentManager(), fragments));
+        mViewPager.setAdapter(new TabPagerAdapter(getChildFragmentManager(), fragments));
 
         mTabLayout = getView().findViewById(R.id.tab);
         TabLayout.Tab interestingTab = mTabLayout.newTab().setText(R.string.interesting_tab);
@@ -104,6 +104,7 @@ public class HomeFragment extends Fragment {
 
         mTabLayout.setupWithViewPager(mViewPager);
         mTabLayout.addOnTabSelectedListener(nOnTabSelectedListener);
+        mTabLayout.getTabAt(2).select();
     }
 
     @Override
